@@ -57,6 +57,7 @@ const SuperRare = () => {
 						price={superRare.price}
 						tag={superRare.tag}
 						time={superRare.time}
+						key={index}
 					/>
 				))}
 			</div>

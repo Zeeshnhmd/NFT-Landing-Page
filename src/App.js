@@ -24,7 +24,6 @@ const App = () => {
 			<Like />
 			<Signup />
 			<Footer />
-			
 		</div>
 	);
 };
