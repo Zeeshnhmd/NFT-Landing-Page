@@ -1,0 +1,24 @@
+.like {
+	margin: 5rem 0;
+	.container {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 4rem;
+	}
+	.content {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		background-color: var(--accent-color2);
+		padding: 3rem;
+		border-radius: 2rem;
+		.title {
+			color: var(--accent-color1);
+		}
+		.description {
+			letter-spacing: 0.1rem;
+			color: var(--accent-color3);
+			line-height: 1.5rem;
+		}
+	}
+}
