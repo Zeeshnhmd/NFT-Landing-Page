@@ -1,6 +1,12 @@
+import React, { useState } from 'react';
+import { GiHamburgerMenu } from 'react-icons/gi';
+import { MdClose } from 'react-icons/md';
+import { BsFillSunFill } from 'react-icons/bs';
+import { BsFillMoonFill } from 'react-icons/bs';
 import logo from '../assets/logo.png';
 
-const Navbar = () => {
+const Navbar = ({ changeTheme, currentTheme }) => {
+	const [navState, setNavState] = useState(false);
 	return (
 		<nav>
 			<div className="brand-container">
@@ -9,7 +15,13 @@ const Navbar = () => {
 				</div>
 				<div className="toggle-container">
 					<div className="toggle"></div>
-					<div className="mode"></div>
+					<div className="mode">
+						{currentTheme === 'dark' ? (
+							<MdClose className="light" />
+						) : (
+							<BsFillMoonFill className="dark" />
+						)}
+					</div>
 				</div>
 			</div>
 			<div className="links-container">
@@ -25,6 +37,13 @@ const Navbar = () => {
 					</li>
 					<li>
 						<a href="/">Sign Up</a>
+					</li>
+					<li onClick={changeTheme}>
+						{currentTheme === 'dark' ? (
+							<BsFillSunFill className="light" />
+						) : (
+							<BsFillMoonFill className="dark" />
+						)}
 					</li>
 				</ul>
 			</div>
