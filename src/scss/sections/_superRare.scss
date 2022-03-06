@@ -11,9 +11,9 @@
 			font-size: 2.4rem;
 		}
 		.description {
-			color: var(--accent-color1);
+			color: var(--accent-color3);
 			a {
-				color: var(--accent-color1);
+				color: var(--accent-color3);
 				font-weight: bold;
 			}
 		}
@@ -22,5 +22,21 @@
 		display: flex;
 		justify-content: space-evenly;
 		gap: 5rem;
+	}
+}
+
+@media screen and (min-width: 280px) and (max-width: 1080px) {
+	.super-rare {
+		padding: 1rem 2rem;
+		width: 100vw;
+		.cards {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1rem;
+			place-items: center;
+			.card {
+				zoom: 0.7;
+			}
+		}
 	}
 }

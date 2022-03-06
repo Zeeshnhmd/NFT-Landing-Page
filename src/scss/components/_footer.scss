@@ -15,6 +15,13 @@ footer {
 				list-style: none;
 				display: flex;
 				gap: 1rem;
+				li {
+					cursor: pointer;
+					transition: 0.6s ease-in-out;
+					&:hover {
+						color: var(--pink);
+					}
+				}
 			}
 		}
 		.links {
@@ -33,6 +40,13 @@ footer {
 					display: flex;
 					flex-direction: column;
 					gap: 1rem;
+					li {
+						cursor: pointer;
+						transition: 0.6s ease-in-out;
+						&:hover {
+							color: var(--pink);
+						}
+					}
 				}
 			}
 		}
@@ -42,6 +56,27 @@ footer {
 		justify-content: space-between;
 		span {
 			color: var(--accent-color3);
+		}
+	}
+	@media screen and (min-width: 280px) and (max-width: 1080px) {
+		margin: 0;
+		gap: 2rem;
+		padding: 1rem 2rem;
+		.upper {
+			flex-direction: column;
+			gap: 2rem;
+			.links {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 2rem;
+				.link {
+					gap: 1rem;
+				}
+			}
+		}
+		.lower {
+			flex-direction: column;
+			gap: 1rem;
 		}
 	}
 }
