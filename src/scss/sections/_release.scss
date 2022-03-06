@@ -84,4 +84,31 @@
 	.green {
 		background-color: var(--green);
 	}
+	@media screen and (min-width: 280px) and (max-width: 1080px) {
+		margin: 0;
+		gap: 0;
+		.release {
+			border-radius: 0;
+			grid-template-columns: 1fr;
+			padding: 1rem 2rem;
+			gap: 2rem;
+			&:nth-of-type(1) {
+				.image {
+					grid-row: 1;
+				}
+			}
+			.content {
+				padding: 0;
+			}
+			.image {
+				zoom: 0.5;
+			}
+			.card-container {
+				zoom: 0.5;
+			}
+			.ellipse {
+				display: none;
+			}
+		}
+	}
 }
