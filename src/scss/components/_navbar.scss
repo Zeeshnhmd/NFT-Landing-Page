@@ -8,8 +8,16 @@ nav {
 				height: 100%;
 			}
 		}
-		.toogle-container {
+		.toggle-container {
 			display: none;
+			.mode {
+				.dark {
+					color: yellow;
+				}
+				.light {
+					color: #000;
+				}
+			}
 		}
 	}
 	.links-container {
@@ -18,6 +26,12 @@ nav {
 			display: flex;
 			gap: 4rem;
 			li {
+				.dark {
+					color: #000;
+				}
+				.light {
+					color: yellow;
+				}
 				a {
 					color: var(--accent-color1);
 					text-decoration: none;
@@ -26,6 +40,18 @@ nav {
 					a {
 						color: var(--pink);
 					}
+				}
+			}
+		}
+	}
+}
+
+[data-theme='light'] {
+	nav {
+		.brand-container {
+			.brand {
+				img {
+					filter: brightness(0);
 				}
 			}
 		}
